@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- 本Demo是Html相关知识 -->
+<!-- 2019年3月28日 -->
+<html>
+	<head>
+		<!-- 网页的编码charset字符集，防止网页乱码，快速注释使用ctrl+/快捷 -->
+		<meta charset="utf-8">
+		<!-- 设置网页关键字，与网站的内容相关 -->
+		<!-- 设置网页关键字属于网页优化的一部分 -->
+		<!-- 网页关键字是为搜索引擎提供服务的 -->
+		<meta name="keywords" content="日用百货,男装,女装">
+		<!-- 设置网页描述信息 -->
+		<meta name="description" content>
+		<!-- 实现网页重定向 -->
+		<!-- 3秒后跳转百度，应用：由开始的test.com跳转到t.com -->
+		<!-- <meta http-equiv="refresh" content="3;http://www.baidu.com"> -->
+		
+		<!-- <link rel="stylesheet" type="text/css" href="mystyle.css"> -->
+		<!-- 设置网页图标，一般将网页图标放置到网站的根目录下，一般使用ico格式的 -->
+		<link rel="icon" href="./title.ico">
+		<!-- 引用样式表，href放样式表的地址 -->
+		<link rel="stylesheet" href="">
+		
+		<title>这是网页的标题</title>
+		
+		<base target="_blank">
+	</head>
+	<body style="background-color: darkgray;">
+		<!-- 背景颜色，避免使用bgcolor="red"来表示 -->
+		<h1>文章的标题。</h1>
+		<h2 style='background-color: yellow; font-family: "微软雅黑"; color: green; font-size: 30px; text-align: center;'>二级标题居中。</h2><!-- 避免使用align="center"来居然 -->
+		<h3>三级标题。
+			<sup>(上标字)</sup>
+		</h3>
+		<h6 style="margin-left:50px">(距离左侧距离为50px)六级标题。
+			<sub>(下标字)</sub>
+		</h6>
+		<hr><!-- 创建水平线 -->
+		<p>段落。</p>
+		<a href="https://www.baidu.com" id="test">
+			链接<i><strong>百度（加粗斜体）</strong></i>
+		</a><br>
+		<a href="http://www.baidu.com" target="_self">点我去百度（当前窗口中打开）</a>
+		<br>
+		<a href="http://www.baidu.com" target="_blank">点我去百度（新窗口中打开）</a>
+		<br>
+		<a href=" #" >在本页面内跳转</a>
+		<p><strong>换行符只有开始标签，且有一个“/”，推荐使用strong来加粗，不推荐使用b来加粗</strong></p>
+		<p>This is<br />a para<br />graph with line breaks</p>
+		<br>
+		<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1552632139968&di=900fcb9db0176ab64e273cc769ffc771&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D7ab5eef0a8cc7cd9fa2d34d109012104%2F16e1e7fb43166d229950e0894d2309f79052d2a7.jpg"
+		 alt="可乐" title="超链接" width="200" height="200">
+		<br>
+		<button><big><b><em>点我(着重)</em>（加粗按钮）</b></big></button>
+		<!-- 三大列表 -->
+		<ol>
+			<!-- 列表项 -->
+			<li>有</li>
+			<li>序</li>
+		</ol>
+		<ul>
+			<!-- 列表项 -->
+			<li>无</li>
+			<li>序</li>
+		</ul>
+		<!-- 一般在网页的尾部使用自定义列表 -->
+		<dl>
+			<!-- 列表项标题 -->
+			<dt>分行（顶格显示）</dt>
+			<!-- 列表项 -->
+			<dd>自</dd>
+			<dd>定</dd>
+			<dd>义</dd>
+		</dl>
+		<font size="5" color="red">html中的字体颜色大小表示。</font><!-- html中表示字体颜色大小的方式 color属性；size属性（不要单位） -->
+		<del>100删除线</del><!-- html中表示删除线 -->
+		<s>999</s>
+		<p style="color:darkgreen;r font-size:20px">使用此方式表示字体的颜色大小及字体</p>
+		<table border="" cellspacing="" cellpadding="">
+			<!-- 创建一个表格 -->
+			<tr>
+				<th>Header</th>
+			</tr>
+			<tr>
+				<td>Data</td>
+			</tr>
+		</table>
+		<p>这个是引用句：<q>引用引用！</q></p>
+		<blockquote>
+			引用引用。
+		</blockquote>
+		<p>abbr</p>
+		<p><ins>同时输入，按ctrl加左键，设置若干个光标。下划线标签</ins></p>
+		<p><u>同时输入，按ctrl加左键，设置若干个光标。</u></p>
+		<img src="logo.jpg" title="此logo设置了宽度与高度(会拉伸压缩)" alt="这是某公司logo" width="200" height="50">
+		<img src="logo.jpg" title="logo只设置了高度(自动缩放比例)" alt="这是某公司logo" width="200" >
+		<!-- <img src="./1/logo.jpg" alt="1" width="300"> -->
+		<br>
+		<a href="#test">跳转锚链接（第一个百度搜索处）</a>
+		<br>
+		<span>文字1</span><span>文字2（中间不含空格）</span>
+		<br>
+		<span>文字1</span>&nbsp;<span>文字2（中间含空格）</span>
+		<p>今天学习了&lt;p&gt;&lt;/p&gt;标签</p>
+		<br>
+		<p><abbr title="World Health Organization">WHO</abbr>&nbsp;用于表示缩略词的双标签&lt;abbr&gt;</p>
+		<p>
+			<abbr>WWF</abbr>的目标是：（冒号后面是短的引用，会自动加入双引号）<q>构建人与自然和谐共存的世界。</q>
+		</p>
+		<p>以下内容引用自 <abbr>WWF</abbr>的网站：（下面是长引用）</p>
+		<blockquote cite="http://www.worldwildlife.org/who/index.html">
+			五十年来，WWF 一直致力于保护自然界的未来。
+			世界领先的环保组织，WWF 工作于 100 个国家，
+			并得到美国一百二十万会员及全球近五百万会员的支持。
+		</blockquote>
+		<!-- 表示地址，会自动斜体 -->
+		<address>
+			Written by Donald Duck.<br> 
+			Visit us at:<br>
+			Example.com<br>
+			Box 564, Disneyland<br>
+			USA
+		</address>
+		<!-- 用于双向重写的 HTML <bdo> -->
+		<p>双向重写</p>
+		<bdo dir="rtl">This text will be written from right to left</bdo>
+		<p><kbd>File | Open...HTML &lt;kbd&gt; 元素定义键盘输入</kbd></p>
+		<br>
+		<samp>
+			用双标签samp定义计算机输出
+			demo.example.com login: Apr 12 09:10:17
+			Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+		</samp>
+		<br>
+		<p>code 元素不保留多余的空格和折行：</p>
+		<p>如需解决该问题，您必须在 pre 元素中包围代码：</p>
+		<code>
+			<pre>
+				var person = {
+					firstName:"Bill",
+					lastName:"Gates",
+					age:50,
+					eyeColor:"blue"
+				}
+			</pre>
+		</code>
+		<p>爱因斯坦的公式：(var定义数学变量)</p>
+		<p><var>E</var> = <var>m</var> <var>c</var><sup>2</sup></p>
+		<!-- 视频标签 -->
+		<!-- src:设置视频的路径；controls：显示控制栏；loop：设置视频循环播放；autoplay：自动播放 -->
+		<video src="./其他/ds.mp4" controls></video>
+		<!-- 相同视频，多格式表示 -->
+		<video width="600" controls>
+			<source src="./其他/ds.mp4">
+			<source src="./其他/ds.avi">
+		</video>
+		<br>
+		<audio src="./其他/See%20You%20Again.mp3" controls></audio>
+		<br>
+		<audio controls>
+			<source src="./其他/See%20You%20Again.mp3">
+		</audio>
+		<br>
+		<!-- border设置整个表格的外边框，默认值为0；height设置高度（即行高） width设置宽度（即列宽） -->
+		<!-- cellspacing设置列与列之间的距离，默认值为2 -->
+		<!-- align设置对齐方式：left/center/right -->
+		<!-- align设置table标签时，只能改变table标签的对齐方式，不能改变其内容的对齐方式 -->
+		<!-- align设置tr或者td标签时，才是改变内容对齐方式 -->
+		<!-- bgcolor设置背景色 -->
+		<!-- cellpadding设置内容与边框之间的距离（此时就相当于自动调整边距，不与width、height同时使用） -->
+		<!-- <table border="1" height="120" width="600" cellspacing="0" align="center" bgcolor="red"> -->
+		<table border="1" cellpadding="10" cellspacing="0" align="center" bgcolor="chocolate">
+			<caption>人员信息表</caption>
+			<!-- 一般thead/tbody/tfoot不用写，低版本浏览器无法识别 -->
+			</thead>
+				<tr bgcolor="green">
+					<!-- th设置表格的标题（会有加粗、居中效果） -->
+					<th>姓名</th>
+					<th>年龄</th>
+					<th>职业</th>
+					<th>籍贯</th>
+					<th>性别</th>
+				</tr>
+			<thead>
+			<tbody>
+				<tr align="center">
+					<td>小段</td>
+					<td>20</td>
+					<td>学生</td>
+					<td>张家口</td>
+					<td>男</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr align="center">
+					<td>小红</td>
+					<td>25</td>
+					<td>攻城狮</td>
+					<td>北京</td>
+					<td>女</td>
+				</tr>
+			</tfoot>
+		</table>
+		<br>
+		<!-- 细线表格，不要边框；列列之间有距离 -->
+		<table width="400" height="300" cellspacing="1" bgcolor="green">
+			<caption>细线表格</caption>
+			<tr bgcolor="white">
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>职业</th>
+				<th>籍贯</th>
+				<th>性别</th>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td>小段</td>
+				<td>20</td>
+				<td>学生</td>
+				<td>张家口</td>
+				<td>男</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td>小红</td>
+				<td>25</td>
+				<td>攻城狮</td>
+				<td>北京</td>
+				<td>女</td>
+			</tr>
+		</table>
+		<br>
+		<!-- 合并单元格部分 -->
+		<!-- emmet语法快捷输入表格样式，输入下面代码后按Tab键即可快捷生成 -->
+		<!-- table中属性用[]表示，>表示包含的关系，table中包含tr，tr中包含td -->
+		<!-- table[border=1 width=600 height=400]>tr*3>td*5 -->
+		<!-- 想要表格随网页的大小动态调整，则width设置为100%、90%等类 -->
+		<table width="600" height="400" border="1" cellspacing="0" align="center">
+			<tr align="center">
+					<td>坐标</td>
+				<td>1列</td>
+				<td>2列</td>
+				<td>3列</td>
+				<td>4列</td>
+				<td>5列</td>
+			</tr>
+				<tr>
+					<td align="center">1行</td>
+				<td rowspan="3" bgcolor="azure" title="三行进行纵向合并,第二/三行第一个需要删除"></td>
+				<td></td>
+				<td></td>
+				<td colspan="2" bgcolor="antiquewhite" title="第二行进行横向合并,第一行五个需要删除"></td>
+				<!-- <td></td> -->
+			</tr>
+			<tr>
+					<td align="center">2行</td>
+				<!-- <td></td> -->
+				<td colspan="3" bgcolor="aquamarine" title="第二行进行横向合并,第二行3/4个需要删除"></td>
+				<!-- <td></td>
+					<td></td> -->
+				<td></td>
+			</tr>
+			<tr>
+					<td align="center">3行</td>
+				<!-- <td></td> -->
+				<td></td>
+					<!-- 合并此后的3个单元格 -->
+					<!-- 相当于横向合并 -->
+				<td colspan="3" bgcolor="darkgoldenrod" title="第三行进行横向合并,第三行第4/5个需要删除"></td>
+					<!-- 所以后面的三个原来的空格需要删除掉 -->
+				<!-- <td></td>
+				<td></td> -->
+			</tr>
+			<tr>
+					<td align="center">4行</td>
+				<td></td>
+					<!-- 相当于纵向合并 -->
+				<td rowspan="2" bgcolor="blue" title="第四/五行第二列进行纵向合并,第5行的第二个需要删除"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+				<tr>
+					<td align="center">5行</td>
+					<td></td>
+					<!-- 由于上一行纵向合并了，所以此处的第二个格式需要删除 -->
+					<!-- <td></td> -->
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+		</table>
+		<!-- 表单	作用：搜集数据 -->
+		<!-- 组成：1、表单控件（搜集信息）2、提示信息；3、表单域（与table标签相似） -->
+		<!-- action：设置一个用来接收数据的一个后台程序 -->
+		<!-- method：有get与post两种；设置如何将数据交给后台程序的一种方式 -->
+		<!-- get能看到传给1.php之后的username与pwd -->
+		<!-- post后面看不到传给1.php的username与pwd -->
+		<form action="1.php" method="get" id="testForm">
+			
+			<p>用户名：<input type="text" name="username" placeholder="admin"><p>
+			<p>密&nbsp;码：<input type="password" name="pwd"></p>
+			<!-- value是为了区分不同标签的类型 -->
+			<!-- name是为了区分相同类型里不同的值而确定的，是让后台识别的 -->
+			<!-- value和name都是让后台识别的，name的范围比value的范围要广 -->
+			<!-- name是控件的名称 ，value是控件的值， id是控件的身份标志。 -->
+			<a href="https://blog.csdn.net/superzx123/article/details/50349615">input标签name与value区别</a>
+			<br>
+			<input type="radio" name="sex" value="Male">Male
+			<br>
+			<input type="radio" name="sex" value="Female" checked>Female
+			<br>
+			<!-- 提交按钮 -->
+			<p><input type="submit"></p>
+		</form>
+		<br><br>
+		<!-- 只能提交表单里面的，如果页面需求，不同的表单里面的东西提交使用form属性，链接ID即可 -->
+		<input type="text" form="testForm">
+		<br><br>
+		<form action="1.php" method="post">
+			<fieldset>
+				<legend>注册信息</legend>
+				<!-- naxlength：设置控件中最多能输入多少个字符 -->
+				<!-- readonly：设置控件为只读模式（不能输入） -->
+				<!-- disabled：设置控件为未激活（不能输入） -->
+				<!-- name：为控件设置名称 -->
+				<!-- id：设置控件唯一标识（身份证号） -->
+				<!-- value：设置控件默认值 -->
+				<!-- placeholder：设置控件的提示信息 -->
+				邮箱地址：
+				<input type="text" maxlength="16" name="" placeholder="请输入邮箱地址">
+				<br><br>
+				<!-- 智能表单 -->
+				邮箱地址：
+				<input type="email" name="em" placeholder="输入邮箱地址">
+				<font size="3" color="pink">此控件对格式有限制(智能表单)，验证邮箱的控件</font>
+				<br><br>
+				电话号码：
+				<input type="tel">
+				<font size="3" color="pink">移动手机端可以直接弹出数字键盘</font>
+				<br><br>
+				数字：
+				<input type="number" step="5">
+				<font size="3" color="pink">每一次加五个数，能输入字母e(科学计数)</font>
+				<br><br>
+				拾色器：
+				<input type="color" value="#0000f0">
+				<font size="3" color="pink">拾色器的默认颜色要通过<em> #xxxxxx </em>这种格式来改变</font>
+				<br><br>
+				网址：
+				<input type="url">
+				<br><br>
+				滑块：
+				<input type="range">
+				<br><br>
+				时间：
+				<input type="time">
+				<br><br>
+				日期：
+				<input type="date">
+				<br><br>
+				周：
+				<input type="week">
+				<br><br>
+				月：
+				<input type="month">
+				
+			</fieldset>
+			<br>
+			<!-- autofocus：设置控件自动获取焦点 -->
+			<!-- required：设置控件为必须填写 -->
+			<!-- placeholder：占位符（提示信息） -->
+			<!-- autocomplete:自动完成（默认为on，可以改为off) -->
+			<!-- novalidate:关闭验证，比如智能填email时需要满足格式，关闭后可跳过 -->
+				密码：
+				<input type="password" name="" autofocus required maxlength="6">
+				<font size="2" color="red">密码长度为6</font>
+			<br>
+			爱好：
+			<!-- 复选框：checkbox -->
+			<input type="checkbox" name="" checked>看书
+			<input type="checkbox" name="">写字
+			<input type="checkbox" name="" checked>写代码
+			<br>
+			性别：
+			<!-- 单选框：radio -->
+			<!-- 如果要实现单选效果，那么需要将该控件设置相同的name属性值 -->
+			<input type="radio" name="sex" checked>男
+			<input type="radio" name="sex" >女
+			<br>
+			籍贯：
+			<!-- select中有multiple属性（多选） -->
+			<select>
+				<option selected>安徽</option>
+				<option>浙江</option>
+				<option>江苏</option>
+			</select>
+			<select>
+				<optgroup label="安徽省">
+					<option>合肥</option>
+					<option selected>安庆</option>
+					<option>马鞍山</option>
+				</optgroup>
+			</select>
+			<br><br><br>
+			按ctrl可以多选
+			<select multiple="multiple">
+				<option>IT行业</option>
+				<option>计算机行业</option>
+				<option>市场推广</option>
+			</select>
+			<br><br><br>
+			<input type="range" value="5">
+			<br>
+			上传文件：
+			<input type="file">
+			<br>
+			多行文本域
+			<textarea rows="10" cols="50">
+				测试内容
+			</textarea>
+			<br>
+			<!-- 提交按钮：提交表单信息（需要在表单域里面） -->
+			<input type="submit">
+			<br>
+			<!-- 提交按钮 -->
+			<input type="image" src="logo.jpg" width="200">
+			<br>
+			<!-- 该按钮不能直接在表单域中提交数据 -->
+			<!-- 该按钮一般配合JS使用 -->
+			<input type="button" value="注册">
+			<br>
+			<!-- 将控件中的值恢复到默认值 -->
+			<input type="reset">
+		</form>
+		<br><br>
+		<input type="text" list="date">
+		<datalist id="date">
+			<option value ="qd">前端培训</option>
+			<option value ="qz">全栈培训</option>
+			<option value ="ja">JAVA培训</option>
+		</datalist>
+		<br><br>
+		<input type="text" list="date2">
+		<datalist id="date2">
+			<option>前端培训</option>
+			<option>全栈培训</option>
+			<option>JAVA培训</option>
+		</datalist>
+		<br>
+		<hr >
+		<!-- CSS相关 -->
+		<table width="400" height="300" border="1" cellspacing="0" cellpadding="0" bgcolor="green">
+			<tr bgcolor="greenyellow">
+				<td colspan="5" align="center">登陆界面</td>
+			</tr>
+			<tr>
+				<td>用户名</td>
+				<td colspan="4">
+					<input type="text" placeholder="请输入用户名" autofocus>
+				</td>
+			</tr>
+			<tr>
+				<td><p>密　码</p></td>
+				<td colspan="4">
+					<input type="password">
+				</td>
+			</tr>
+			<tr bgcolor="#fff">
+				<td colspan="5">
+					<a href="./login.html">登陆</a>
+					<a href="#">注册</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
