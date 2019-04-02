@@ -1,5 +1,7 @@
 ## 配置上传项目
 
+查看html文件，在开头开入`http://htmlpreview.github.io/?`
+
 [教你如何一步步将项目部署到Github](https://www.cnblogs.com/fengxiongZz/p/6477456.html)
 
 **第一步：**
