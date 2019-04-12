@@ -1,6 +1,10 @@
 作者：HConan
 日期：2019-04-01
 
+2019-04-08更新内容：
+	1. 增加获取焦点内容
+	2. CSS中的合并表格边框
+
 相关说明：ConanHtmlDemo.html涵盖示例
 
 目录：
@@ -23,6 +27,7 @@
 	* [7.4 智能表单](#智能表单)
 	* [7.5 新增表单元素](#新增表单元素)
 	* [7.6 相关属性](#相关属性)
+	* [7.7 获取焦点](#获取焦点)
 
 <span id="HTML"></span>
 # HTML
@@ -59,6 +64,7 @@
 				同一个文件夹中
 				页面在上一级目录中（用`./`来表示当前目录或下一级目录）
 				页面在下一级目录中（用`../`来表示上一级目录）
+				用户根目录（用`~/`来表示）[不使用]
 			绝对路径：
 				带有磁盘目录或者网站地址
 		title:
@@ -164,7 +170,7 @@
 	</ul>
 </body>
 ```
-**有效列表**
+**有序列表**
 ```html
 <body>
 	<ol>
@@ -320,6 +326,48 @@ video/audio:
 	
 	横向合并：colspan
 	纵向合并：rowspan
+
+**CSS中的合并表格边框**
+
+快速完成细线表格操作
+
+```html
+<style type="text/css">
+	table {
+		width: 300px;
+		height: 400px;
+	}
+	table,td {
+		border: 1px solid red;
+		/* 边框合并(只能用于表格中) */
+		border-collapse: collapse;
+	}
+</style>
+
+<body>
+	<table>
+		<caption>细线表格</caption>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+```
 	
 **emmet快捷输入：**
 
@@ -548,4 +596,24 @@ table中属性用[]表示，>表示包含的关系，table中包含tr，tr中包
 	placeholder：占位符（提示信息）
 	autocomplete:自动完成（默认为on，可以改为off)
 	novalidate:关闭验证，比如智能填email时需要满足格式，关闭后可跳过
-	
+
+<span id="获取焦点"></span>
+### 7.7 获取焦点
+
+当点击"用户名"时，会自动获取输入框焦点
+
+```html
+<style type="text/css">
+	/* 获取焦点时变红色背景 */
+	.box1:focus {
+		background: red;
+	}
+</style>
+
+<body>
+	<!-- 点击label获取到后面的焦点，用for链id -->
+	<label for="box1">用户名</label><input type="text" class="box1" id="box1" value="去轮廓线">
+</body>
+```
+
+
